@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Restro{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block stylesheet %}{% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class = "Main-Container">
+    </div>
+    <div class = 'Sub-Container'>
+        <nav>
+            <div class = "Title-Container">
+                <div class = "container-child TitleLogo">
+                    <p class="rainbow-text"><span class = "FirstLetter">R</span>estro.</p>
+                </div>
+                <div class = "container-child social-menu">
+                    <ul>
+                        <li><a href="#"><i class = "fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class = "fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class = "fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class = "fa fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+    {% endblock body %}
+    <!-- Loading jquery here -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
